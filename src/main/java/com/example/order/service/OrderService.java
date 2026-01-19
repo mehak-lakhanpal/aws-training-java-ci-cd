@@ -16,9 +16,7 @@ public class OrderService {
     private OrderRepository orderRepository;
 
     public List<Order> getOrders() {
-        log.info("Returning orders from DB");
         List<Order> orders =  orderRepository.findAll();
-        log.info("Orders in DB:{}",orders);
         return orders;
     }
 

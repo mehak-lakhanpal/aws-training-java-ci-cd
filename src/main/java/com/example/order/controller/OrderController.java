@@ -23,7 +23,6 @@ public class OrderController {
 
     @GetMapping(path = "/orders")
     public ResponseEntity<List<Order>> getAllOrders() {
-        log.info("Got fetch orders request");
         return ResponseEntity.ok().body(orderService.getOrders());
     }
 
